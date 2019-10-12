@@ -31,6 +31,7 @@
  * @returns {string} should be exactly "Hello!"
  */
 function hello () {
+    return "Hello!";
   // if you want you can declare a string variable first
   // or in this case you can just return the string directly
   // with something like "return 'Hello!'"
@@ -46,6 +47,7 @@ function hello () {
  * @returns {string} a sentence that uses NAME i nits construction.
  */
 function greeting(name) {
+return "Hello, " + name + "!";
   // use the '+' operator to combine
   // strings.  So for instance, if I wanted to
   // say goodbye, I might write
@@ -64,6 +66,8 @@ function greeting(name) {
  * @returns {array} 
  */
 function returnArray (first, second, third) {
+  array= [first , second, third]
+  return array
   // you can define the array using "new Array ()" or just "[ , , ]"
   // don't forget to return it
 }
@@ -83,6 +87,7 @@ function returnArray (first, second, third) {
  * @returns {string} a sentence  composed from the first 3 elements of the array
  */
 function splitArray (thisArray) {
+  return (array[0] + " " + array[1] + " was a " + array[2] + ".")
   // remember you can access individual elements of an array with
   // array[0]
   // array[1]
@@ -91,7 +96,7 @@ function splitArray (thisArray) {
 }
 
 // Problem 5
-// A. Write a simple function that takes two arguments.  Subtact the second number from the first.
+// A. Write a simple function that takes two arguments.  Subtract the second number from the first.
 // Return the result
 /**
  * subtract NUMBER2 from NUMBER1
@@ -100,6 +105,7 @@ function splitArray (thisArray) {
  * @returns {number} the difference of the two parameters
  */
 function subtract(number1, number2) {
+  return number1 - number2;
   // subtract number2 from number1, and return the result.
 }
 
@@ -109,6 +115,11 @@ function subtract(number1, number2) {
 // "I can only subtract numbers."
 
 function carefulSubtract (first, second) {
+if (first === Number + second === Number) 
+  return first - second;
+if (first !== Number + second !== Number)
+  return "I can only subtract numbers";
+
   // test to be sure that both first and second are numbers.
   // if so, return the result. Otherwise, return the string
   // "I can only subtract numbers."
