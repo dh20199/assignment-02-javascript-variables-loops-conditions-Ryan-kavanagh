@@ -87,7 +87,7 @@ function returnArray (first, second, third) {
  * @returns {string} a sentence  composed from the first 3 elements of the array
  */
 function splitArray (thisArray) {
-  return (array[0] + " " + array[1] + " was a " + array[2] + ".")
+  return (thisArray[0] + " " + thisArray[1] + " was a " + thisArray[2] + ".")
   // remember you can access individual elements of an array with
   // array[0]
   // array[1]
@@ -115,10 +115,13 @@ function subtract(number1, number2) {
 // "I can only subtract numbers."
 
 function carefulSubtract (first, second) {
-if (first === Number + second === Number) 
-  return first - second;
-if (first !== Number + second !== Number)
-  return "I can only subtract numbers";
+if (first === Number && second === Number) {
+   let output = first - second;
+   return output;
+}
+else {
+  return "I can only subtract numbers.";
+}
 
   // test to be sure that both first and second are numbers.
   // if so, return the result. Otherwise, return the string
@@ -136,10 +139,22 @@ if (first !== Number + second !== Number)
 // for any other type, return "I don't know how to use that kind of variable."
 /**
  * identify the type of UNKNOWN
- * @param {} unknown
+ * @param {} variable
  * @returns {} a meessage about unknown, or the square of unknown if it is a number
  */
-function typeTester (unknown) {
+function typeTester (variable) {
+  if (variable = String) {
+    return variable + " yay!";
+  }
+  if (variable = Number) {
+    return variable * variable; 
+  }
+  if (variable = null) {
+    return "sorry, I can't do anything with a null value."
+  }
+  else {
+    return "I don't know how to use that kind of variable."
+  }
   // use an if/else construction, a switch/case , or any other branching logic. Remember to
   // return a value. 
 }
