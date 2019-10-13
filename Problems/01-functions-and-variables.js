@@ -139,8 +139,8 @@ else {
 // for any other type, return "I don't know how to use that kind of variable."
 /**
  * identify the type of UNKNOWN
- * @param {} variable
- * @returns {} a meessage about unknown, or the square of unknown if it is a number
+ * @param {variable}
+ * @returns {variable} a meessage about unknown, or the square of unknown if it is a number
  */
 function typeTester (variable) {
   if (variable = String) {
