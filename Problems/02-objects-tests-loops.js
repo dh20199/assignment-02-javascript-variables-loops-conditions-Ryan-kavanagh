@@ -130,6 +130,12 @@ function wasWriter (obj) {
  * @returns {string}
  */
 function stringIterator (aString, aNumber) {
+  let x = '';
+  for (let i = 0; i < aNumber; i++) { 
+    x = x + aString
+  }
+    return x;
+  
   // remember a basic "for" loop has this structure:
   // for (var i = 0; i< SOMETHING; i++) {...statements...  };
 }
@@ -156,6 +162,13 @@ function stringIterator (aString, aNumber) {
  * @returns   {string}
  */
 function prettyIterator (aString, aNumber) {
+let x = '';
+let y = 0;
+for (let i = 0; i < aNumber; i++) {
+y++;
+x = x + aString + "(" + y + ")\n" 
+}
+return x;
   // be sure to check your results on this one; it has a trick. maybe 2. 
 }
 
@@ -199,6 +212,9 @@ function prettyIterator (aString, aNumber) {
  * @returns {string} 
  */
 function computeReign (pm) {
+  let x = pm.to - pm.from;
+  return pm.fullName + "'s reign was " + x + " years long.";
+  
   // declare a variable, setting it equal to the
   // length of reign. Now declare another variable,
   // and construct the desired sentence using the appropriate
@@ -254,6 +270,13 @@ function computeReign (pm) {
  *  the properties of the individual objects comprising `list`
  */
 function sentences(list) {
+  let x = '';
+  for (let obj of list) {
+    let y = obj.to - obj.from;
+  x = x + obj.fullName + "'s reign was " + y + " years long.\n"
+  }
+  return x;
+  
   // Hint: "ministers" is an ARRAY of OBJECTS. The simplest way to solve this problem
   // is to use the "for...of" loop syntax to loop through the array,
   // and the object[attribute] or object.attribute reference format to access
