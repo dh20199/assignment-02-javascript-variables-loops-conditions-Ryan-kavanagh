@@ -115,16 +115,8 @@ function subtract(number1, number2) {
 // "I can only subtract numbers."
 
 function carefulSubtract (first, second) {
-  let x = first,
-      y = second;
-if (x === Number && y === Number) {
-   let output = (x - y);
-   return output;
-}
-
-if (x !== Number) {
-  let output = "I can only subtract numbers.";
-  return output;
+if (typeof first === "number" && typeof second === "number") {
+  return (first - second);
 }
 else {
   return "I can only subtract numbers.";
@@ -147,18 +139,18 @@ else {
 // for any other type, return "I don't know how to use that kind of variable."
 /**
  * identify the type of UNKNOWN
- * @param {variable}
- * @returns {variable} a meessage about unknown, or the square of unknown if it is a number
+ * @param {UNKNOWN}
+ * @returns {UNKNOWN} a meessage about unknown, or the square of unknown if it is a number
  */
-function typeTester (variable) {
-  if (variable === String) {
-    return variable + " yay!";
+function typeTester (UNKNOWN) {
+  if (typeof UNKNOWN === "string") {
+    return UNKNOWN + " yay!";
   }
-  if (variable === Number) {
-    return variable * variable; 
+  if (typeof UNKNOWN === "number") {
+    return UNKNOWN * UNKNOWN; 
   }
-  if (variable === null) {
-    return "sorry, I can't do anything with a null value."
+  if (typeof UNKNOWN === "undefined") {
+    return "Sorry, I can't do anything with an undefined value."
   }
   else {
     return "I don't know how to use that kind of variable."
