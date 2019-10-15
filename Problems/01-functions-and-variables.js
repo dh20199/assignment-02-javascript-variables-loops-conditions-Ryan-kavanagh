@@ -87,7 +87,7 @@ function returnArray (first, second, third) {
  * @returns {string} a sentence  composed from the first 3 elements of the array
  */
 function splitArray (thisArray) {
-  return (thisArray[0] + " " + thisArray[1] + " was a " + thisArray[2] + ".")
+  return thisArray[0] + " " + thisArray[1] + " was a " + thisArray[2] + "."
   // remember you can access individual elements of an array with
   // array[0]
   // array[1]
